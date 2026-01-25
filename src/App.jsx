@@ -5,6 +5,7 @@ import './App.css'
 import React from 'react';
 import UserList from './UserList'; // Import the component
 import Counter from './Counter';
+import UserAPI from './UserAPI';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,6 @@ function App() {
 
   return (
     <>
-      <Counter />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -51,6 +51,7 @@ function App() {
       <UserList users={users} />
       <Counter />
     </div>
+    <UserAPI/>
     </>
   )
 }
