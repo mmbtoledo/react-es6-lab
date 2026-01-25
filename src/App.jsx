@@ -17,6 +17,8 @@ function App() {
   console.log('Destructured:', name, age);
   const users = ['Alice', 'Bob', 'Charlie'];
 
+  const isLoggedIn = true; // Change to false to test the other message
+
   return (
     <>
       <Counter />
@@ -43,6 +45,11 @@ function App() {
       <div>
        <h2>User List</h2>
        <UserList users={users} />
+    </div>
+    <div>
+      {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in</p>}
+      <UserList users={users} />
+      <Counter />
     </div>
     </>
   )
